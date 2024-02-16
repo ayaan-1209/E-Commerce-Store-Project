@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="scripts/product.js" >;</script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="res/bootstrap.min.css" rel="stylesheet">
+    <link href="res/style.css" rel="stylesheet">
+    <title>4413 E-commerce Site - Product</title>
+</head>
+
+<body onload="makeProductRequest('rest/reviews')">
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="container">
+            <a class="navbar-brand" href="main.html">eStore<span>.</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsproject" aria-controls="navbarsproject" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsproject">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="login.html"><img src="images/user.svg"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header/Navigation -->
+    <!-- Product details-->
+    <div class="projectsection">
+        <section class="py-5">
+            <div class="container px-5 px-lg-1 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img id="img" class="card-img-top mb-5 mb-md-0" src="images/laptop.jpg" /></div>
+                    <div class="col-md-6">
+                        <h1 id ="name" class="display-5 fw-bolder">Product 1</h1>
+                        <div class="fs-5 mb-5">
+                            <span id="price"></span>
+                        </div>
+                        <p  id="desc" class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+                        <br />
+                        <div class="d-flex">
+                            <button class="btn" type="button" onclick="addToCart('rest/cart')">Add to cart</button>
+                        </div>
+                        <br />
+                        <div class="white-tab p-2 mx-2 ">
+                            <p class="sm-text mb-0">OVERALL RATING</p>
+                            <h4 id="averageRating"></h4>
+                        </div>
+                        <div class="white-tab p-2 mx-2 text-muted">
+                            <p class="sm-text mb-0">ALL REVIEWS</p>
+                            <h4 id="nReviews"></h4>
+                        </div>                 
+                        <br />
+                        <div class="ml-md-auto p-2 mx-md-2 pt-4 pt-md-3">
+                            <button for="c_review" class="btn" data-bs-toggle="collapse" href="#review" role="button" aria-expanded="false" aria-controls="review">WRITE A REVIEW</button>
+                            <div class="collapse" id="review">
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <br />
+                                        <textarea type="text" id="reviewtext" class="form-control" cols="20" rows="3" name="c_review" placeholder="Enter your review here"></textarea>
+                                        <br />
+                                        <input type="number" id="rating" class="form-control text-center quantity-amount" value=""  min="1" max="5" placeholder="Rate from 1-5">
+                                        <br />
+                                        <button class="btn" type="button" onclick="writeReview('rest/reviews')">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body m-3">
+                        <div class="row">
+                            
+                            <div id="reviews" class="col-lg-8">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   <!-- Start Footer Section -->
+   <footer class="footer-section">
+    <div class="container relative">
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+                <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">One Stop Shop<span>.</span></a></div>
+                <p class="mb-4">Welcome to your one stop shop for all your Samsung and Apple needs.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Section -->
+</body>
+
+</html>

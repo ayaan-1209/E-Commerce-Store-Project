@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<script type="text/javascript" src="scripts/catalog.js" >;</script>
+    <!-- Bootstrap CSS -->
+    <link href="res/bootstrap.min.css" rel="stylesheet">
+    <link href="res/style.css" rel="stylesheet">
+    <title>4413 E-commerce Site - Catalog View</title>
+</head>
+
+<body onload="makeCatalogRequest('rest/catalog')">
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+	<!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark">
+
+        <div class="container">
+            <a class="navbar-brand" href="main.html">eStore<span>.</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsproject" aria-controls="navbarsproject" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsproject">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li class="active"><a class="nav-link" href="shop.html">Shop</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="login.html"><img src="images/user.svg"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!-- End Header/Navigation -->
+    <!-- Start Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4">
+                    <div class="intro-excerpt">
+                        <h1>Shop</h1>
+                        <p class="mb-4">Find the right product for you!</p>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+
+
+    <div class="projectsection product-section before-footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1">
+                    <!-- Checkboxes -->
+                    <h2 class="mb-4 section-title">Filters</h2>
+                    <br />
+                    <h3 class="headline">
+                        <span>Brand</span>
+                    </h3>
+                    <div class="checkbox">
+                        <input type="checkbox" value="" id="brand1" onchange="filterCatalog('rest/catalog/filter')">
+                        <label for="brand1">Apple</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="" id="brand2" onchange="filterCatalog('rest/catalog/filter')">
+                        <label for="brand2">Samsung</label>
+                    </div>
+                    <br />
+                    <!-- checkboxs -->
+                    <h3 class="headline">
+                        <span>Type</span>
+                    </h3>
+                    <div class="checkbox">
+                        <input type="checkbox" name="shop-filter__checkbox" id="type1" value="" onchange="filterCatalog('rest/catalog/filter')">
+                        <label for="type1">Phones</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="shop-filter__checkbox" id="type2" value="" onchange="filterCatalog('rest/catalog/filter')">
+                        <label for="type2">Laptops</label>
+                    </div>
+                </div>
+                <div class="col lg-5">
+                    <div id="cat" class="row">
+
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Start Footer Section -->
+  <footer class="footer-section">
+    <div class="container relative">
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+                <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">One Stop Shop<span>.</span></a></div>
+                <p class="mb-4">Welcome to your one stop shop for all your Samsung and Apple needs.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Section -->
+</body>
+
+</html>
